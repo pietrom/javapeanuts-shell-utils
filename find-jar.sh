@@ -1,4 +1,7 @@
 #!/bin/bash
+# Commonly available under GPL 3 license
+# Copyleft Pietro Martinelli - javapeanuts.blogspot.com
+
 jarsFound=""
 for file in $(find . -name "*.jar"); do
 	echo "Processing file ${file} ..."
