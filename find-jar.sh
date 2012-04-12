@@ -3,7 +3,8 @@
 # Copyleft Pietro Martinelli - javapeanuts.blogspot.com
 if [ -z $1 ]
 then
-	echo "Usage: $0 text"
+	echo "Usage: $0 <pattern>"
+	echo "tar xf's output will be tested against provided <pattern> in order to select matching JARs"
 	exit 1
 else
 	jarsFound=""
