@@ -1,4 +1,6 @@
 #!/bin/bash
+# Commonly available under GPL 3 license
+# Copyleft Pietro Martinelli - javapeanuts.blogspot.com
 
 function cleanTmpDir {
 	echo "  Cleaning ${1}/${2}"
