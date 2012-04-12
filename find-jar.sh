@@ -4,6 +4,7 @@
 if [ -z $1 ]
 then
 	echo "Usage: $0 text"
+	exit 1
 else
 	jarsFound=""
 	for file in $(find . -name "*.jar"); do
@@ -31,4 +32,5 @@ else
 	else
 		echo "${1} not found"
 	fi
+	exit 0
 fi
