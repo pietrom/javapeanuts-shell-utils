@@ -7,10 +7,12 @@ then
 	echo "tar xf's output will be tested against provided <pattern> in order to select matching JARs"
 	exit 1
 else
+	toSearch=$(echo ${1} | tr '.' '/')
+	echo "Finding class ${1}: using pattern ${toSearch}"
 	jarsFound=""
 	for file in $(find . -name "*.jar"); do
 		echo "Processing file ${file} ..."
-	        out=$(jar tf ${file} | grep ${1})
+	        out=$(jar tf ${file} | grep ${toSearch})
 		if [ "${out}" != "" ]
 		then
 			echo "  Found '${1}' in JAR file ${file}"
